@@ -2,7 +2,7 @@ export const SUCCESS_LOGIN = "auth/SUCCESS_LOGIN";
 export const START_LOGIN_PROCESS = "auth/START_LOGIN_PROCESS";
 
 const initialState = {
-  isAuthenticated: false,
+  isAuthenticated: true,
   loginProcessing: false
 };
 
