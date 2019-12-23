@@ -1,5 +1,22 @@
 import styled from "styled-components";
 
+export const AppWrapper = styled.div`
+  background-color: #f5f8fa;
+  transition: background-color 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
+  min-height: 100vh;
+  display: flex;
+  &.bp3-dark {
+    background-color: #30404d;
+  }
+`;
+
+export const AppContainer = styled.div`
+  width: calc(100% - 80px);
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+`;
+
 export const NavWrapper = styled.div`
   flex-basis: 270px;
   position: relative;
@@ -7,8 +24,12 @@ export const NavWrapper = styled.div`
 `;
 
 export const Nav = styled.div`
-  box-shadow: 1px 0 0 rgba(16, 22, 26, 0.4);
-  background-color: #394b59;
+  box-shadow: 1px 0 0 rgba(16, 22, 26, 0.15);
+  background-color: #fff;
+  .bp3-dark & {
+    box-shadow: 1px 0 0 rgba(16, 22, 26, 0.4);
+    background-color: #394b59;
+  }
   position: fixed;
   width: 1269px;
   height: 100vh;
@@ -52,6 +73,21 @@ export const NavButton = styled.div`
   & > .bp3-fill {
     flex-grow: 1;
     flex-shrink: 1;
+  }
+  &:hover {
+    background-image: linear-gradient(
+      90deg,
+      rgba(245, 248, 250, 0) 0,
+      #f5f8fa 40%
+    );
+  }
+  color: inherit;
+  .bp3-dark &:hover {
+    background-image: linear-gradient(
+      90deg,
+      rgba(48, 64, 77, 0) 0,
+      #30404d 40%
+    );
   }
 `;
 
